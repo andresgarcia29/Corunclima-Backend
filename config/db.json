@@ -1,0 +1,5 @@
+{
+ "name": "corunclima",
+ "host": "localhost",
+ "port" : 27017 
+}

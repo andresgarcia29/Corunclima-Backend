@@ -1,0 +1,35 @@
+{
+  "name": "corunclima-backend",
+  "version": "1.0.0",
+  "description": "Backend of conrunclima",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresgarcia29/Corunclima-Backend.git"
+  },
+  "author": "José Andrés García Manzo <jose.andres.gm29@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresgarcia29/Corunclima-Backend/issues"
+  },
+  "homepage": "https://github.com/andresgarcia29/Corunclima-Backend#readme",
+  "dependencies": {
+    "aws-sdk": "^2.112.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.6",
+    "morgan": "^1.8.2",
+    "multer": "^1.3.0",
+    "multer-s3": "^2.7.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^2.2.1"
+  }
+}
