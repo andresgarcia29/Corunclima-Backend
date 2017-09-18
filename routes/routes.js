@@ -52,6 +52,7 @@ Router
 
   .get('/new/get', NewController.get)
   .get('/new/get/:_id', NewController.getId)
+  .get('/new/category/:_id', NewController.getCategory)
   .post('/new/create', NewController.create)
   .put('/new/update/:_id', NewController.update)
   .delete('/new/delete/:_id', NewController.delete)
