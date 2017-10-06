@@ -9,7 +9,7 @@ const ProductSchema = new Schema({
   subCategory: { type: String, enum: ['cabs','buses','rv','dc','minivan','midvan','bigvan','pickup','truck12','truc24','diesel','truck','minibus','midbus','bigbus'] },
   princialImage: { type: String },
   images: [ { type: String } ],
-  caracteristicas: { type: String },
+  carecteristicas: { type: String, required: true},
 
   modelo: { type: String, default: ''},
   enfriamento: { type: String, default: ''},

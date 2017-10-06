@@ -29,7 +29,7 @@ class NewController{
   }
   getCategory(req, res){
     if (!req.params._id) res.status(500).send({status: 1, message: 'No se envio algún ID'})
-    New.find({category: req.params._id}, (err, newOne) => {
+    New.find({subCategory: req.params._id}, (err, newOne) => {
       if (err) return res.status(500).send({status: 1, message: 'Error en el servidor'})
       if (!newOne) return res.status(404).send({status: 1, message: 'No se ha encontrado ninguna noticia'})
       res.status(200).send({

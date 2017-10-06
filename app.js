@@ -5,11 +5,14 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   port = process.env.PORT || 3000,
   passport = require('passport'),
+  cors = require('cors'),
   Routes = require('./routes/routes');
 
 const app = express();
 
 app
+
+  .use(cors())
 
   .use(passport.initialize())
 

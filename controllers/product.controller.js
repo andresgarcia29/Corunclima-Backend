@@ -62,6 +62,20 @@ class ProductController{
       })
     })
   }
+  updateNormal(req, res){
+    if (!req.params._id) res.status(500).send({status: 1, message: 'No se envio algún ID'})
+    Product.findById(req.params._id, (err, prod) => {
+      if (err) return res.status(500).send({status: 1, message: 'Error en el servidor'})
+      prod = Object.assign(prod, req.body);
+      prod.save((err) => {
+        if (err) throw err
+        res.status(200).send({
+          status: 0,
+          message: 'Producto actualizado correctamente'
+        })
+      })
+    })
+  }
   delete(req, res){
     if (!req.params._id) res.status(500).send({status: 1, message: 'No se envio algún ID'})
     Product.findByIdAndRemove(req.params._id, (err, newOne) => {

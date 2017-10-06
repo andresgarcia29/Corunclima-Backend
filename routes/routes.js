@@ -1,6 +1,7 @@
 const UserController = require('../controllers/user.controller'),
   NewController = require('../controllers/new.controller'),
   ProductController = require('../controllers/product.controller'),
+  EmailController = require('../controllers/email.controller'),
   settings = require('../config/settings'),
   express = require('express'),
   Router = express.Router(),
@@ -62,7 +63,12 @@ Router
   .get('/product/get/category/:_category', ProductController.getByCategory)
   .post('/product/create', ProductController.create)
   .put('/product/update/:_id', ProductController.update)
-  .delete('/product/delete/:_id', ProductController.delete);
+  .put('/product/normal/:_id', ProductController.updateNormal)
+  .delete('/product/delete/:_id', ProductController.delete)
+
+  .post('/email', EmailController.create)
+  .delete('/email/:_id', EmailController.delete)
+  .get('/email', EmailController.get);
 
 module.exports = Router;
 function newFunction() {
